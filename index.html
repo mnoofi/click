@@ -116,9 +116,9 @@
         <button id="langToggleBtn" type="button" class="px-3 py-1.5 rounded-lg bg-slate-800/90 hover:bg-slate-700 text-slate-200 text-xs font-bold border border-slate-700 transition">
           🌐 English
         </button>
-        <button id="openDownloadTopBtn" type="button" data-i18n="btn_trial" class="px-4 py-2 rounded-lg bg-gradient-to-r from-[#FF882E] to-orange-600 hover:from-orange-500 hover:to-orange-600 text-white text-xs sm:text-sm font-bold shadow-lg shadow-orange-500/25 transition">
+        <a id="openDownloadTopBtn" href="#direct-download" download="Click_Setup.exe" data-i18n="btn_trial" class="px-4 py-2 rounded-lg bg-gradient-to-r from-[#FF882E] to-orange-600 hover:from-orange-500 hover:to-orange-600 text-white text-xs sm:text-sm font-bold shadow-lg shadow-orange-500/25 transition">
           تجربة مجانية
-        </button>
+        </a>
       </div>
     </div>
   </header>
@@ -145,7 +145,7 @@
         </p>
 
         <div class="flex flex-wrap items-center gap-3 pt-1">
-          <a id="openDownloadBtn" href="https://gofile.io/d/s1EU6EG2" target="_blank" rel="noopener noreferrer" class="px-7 py-4 rounded-xl bg-gradient-to-r from-[#FF882E] to-orange-600 hover:from-orange-500 hover:to-orange-500 text-white font-extrabold text-sm sm:text-base shadow-xl shadow-orange-600/30 flex items-center gap-2.5 transition">
+          <a id="openDownloadBtn" href="#direct-download" download="Click_Setup.exe" class="px-7 py-4 rounded-xl bg-gradient-to-r from-[#FF882E] to-orange-600 hover:from-orange-500 hover:to-orange-500 text-white font-extrabold text-sm sm:text-base shadow-xl shadow-orange-600/30 flex items-center gap-2.5 transition">
             <span>⬇️</span>
             <span data-i18n="hero_dl">تحميل التجربة المجانية (Windows)</span>
           </a>
@@ -506,10 +506,10 @@
       </p>
 
       <div class="flex flex-wrap justify-center gap-3">
-        <button id="openDownloadFootBtn" type="button" class="px-6 py-3 rounded-xl bg-gradient-to-r from-[#FF882E] to-orange-600 hover:from-orange-500 hover:to-orange-500 text-white font-bold text-sm flex items-center gap-2 transition shadow-lg shadow-orange-500/20">
+        <a id="openDownloadFootBtn" href="#direct-download" download="Click_Setup.exe" class="px-6 py-3 rounded-xl bg-gradient-to-r from-[#FF882E] to-orange-600 hover:from-orange-500 hover:to-orange-500 text-white font-bold text-sm flex items-center gap-2 transition shadow-lg shadow-orange-500/20">
           <span>⬇️</span>
           <span data-i18n="cta_dl_btn">تحميل التجربة المجانية</span>
-        </button>
+        </a>
         <a href="https://wa.me/201098306412" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm flex items-center gap-2 transition">
           <span>💬</span>
           <span data-i18n="wa_btn">واتساب الدعم (201098306412)</span>
@@ -527,32 +527,7 @@
     <p>© 2026 Click Studio Pro — Developed by Mohamed Serag (@Serag010)</p>
   </footer>
 
-  <!-- Download Free Trial Modal -->
-  <div id="downloadModal" class="fixed inset-0 z-50 hidden bg-black/75 backdrop-blur-sm flex items-center justify-center p-4">
-    <div class="glass-card rounded-2xl max-w-md w-full p-6 space-y-4 border border-slate-700">
-      <div class="flex items-center justify-between">
-        <h3 data-i18n="dl_modal_t" class="text-lg font-extrabold text-white">تحميل التجربة المجانية — Click Studio</h3>
-        <button type="button" data-close-modal="downloadModal" class="text-slate-400 hover:text-white text-lg font-bold">✕</button>
-      </div>
-      <p data-i18n="dl_modal_d" class="text-xs sm:text-sm text-slate-300 leading-relaxed">
-        متطلبات التشغيل: ويندوز 10 أو ويندوز 11 (64-bit). بعد التثبيت اكتب اسمك داخل البرنامج وابدأ التجربة المجانية فوراً.
-      </p>
-      <div class="p-3.5 rounded-xl bg-amber-500/10 border border-amber-500/30 text-xs text-amber-200 space-y-1">
-        <div class="font-bold" data-i18n="sac_title">💡 ملاحظة لمستخدمي ويندوز 11 (Smart App Control):</div>
-        <div data-i18n="sac_desc">إذا ظهرت رسالة حماية ويندوز عند التثبيت لأول مرة، افتح تشغيل (Win + R) واكتب windowsdefender://smartapp/ واختر Off ثم أعد فتح المثبّت.</div>
-      </div>
-      <div class="flex flex-col gap-2 pt-1">
-        <a href="https://gofile.io/d/s1EU6EG2" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-center text-sm font-bold transition" data-i18n="dl_get_link">
-          احصل على رابط التحميل المباشر عبر واتساب
-        </a>
-        <button id="copySacCmdBtn" type="button" class="w-full py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-bold border border-slate-700 transition" data-i18n="copy_sac">
-          نسخ أمر Smart App Control السريع
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <script>
+<script>
     const state = {
       lang: 'ar',
       activeCat: 'image',
@@ -599,7 +574,7 @@
         cta_dl_btn: 'تحميل التجربة المجانية', wa_btn: 'واتساب الدعم (201098306412)', tg_btn: 'تليجرام (@Serag010)',
         dl_modal_t: 'تحميل التجربة المجانية — Click Studio', dl_modal_d: 'متطلبات التشغيل: ويندوز 10 أو ويندوز 11 (64-bit). بعد التثبيت اكتب اسمك داخل البرنامج وابدأ التجربة المجانية فوراً.',
         sac_title: '💡 ملاحظة لمستخدمي ويندوز 11 (Smart App Control):', sac_desc: 'إذا ظهرت رسالة حماية ويندوز عند التثبيت لأول مرة، افتح تشغيل (Win + R) واكتب windowsdefender://smartapp/ واختر Off ثم أعد فتح المثبّت.',
-        dl_get_link: 'احصل على رابط التحميل المباشر عبر واتساب', copy_sac: 'نسخ أمر Smart App Control السريع'
+        dl_direct_exe: '⬇️ تحميل Click_Setup.exe مباشرة الآن', copy_sac: 'نسخ أمر Smart App Control السريع'
       },
       en: {
         nav_badge: 'Free Trial',
@@ -639,7 +614,7 @@
         cta_dl_btn: 'Download Free Trial', wa_btn: 'WhatsApp Support (201098306412)', tg_btn: 'Telegram (@Serag010)',
         dl_modal_t: 'Download Free Trial — Click Studio', dl_modal_d: 'Requirements: Windows 10 or 11 (64-bit). After installing, enter your name inside the app to start your free trial right away.',
         sac_title: '💡 Windows 11 Smart App Control Note:', sac_desc: 'If Windows blocks the unsigned installer on first run, press Win + R, run windowsdefender://smartapp/, set to Off, and reopen.',
-        dl_get_link: 'Get Direct Download Link via WhatsApp', copy_sac: 'Copy Smart App Control Command'
+        dl_direct_exe: '⬇️ Download Click_Setup.exe Directly', copy_sac: 'Copy Smart App Control Command'
       }
     };
 
@@ -808,19 +783,21 @@
       });
     });
 
+    // ضع هنا رابط التحميل المباشر لملف Click_Setup.exe (مثلاً من GitHub Releases أو سيرفرك الخاص)
+    const DIRECT_EXE_URL = '';
+
     ['openDownloadBtn', 'openDownloadTopBtn', 'openDownloadFootBtn'].forEach(id => {
-      document.getElementById(id).addEventListener('click', () => {
-        document.getElementById('downloadModal').classList.remove('hidden');
-      });
+      const btn = document.getElementById(id);
+      if (!btn) return;
+      if (DIRECT_EXE_URL) {
+        btn.href = DIRECT_EXE_URL;
+      } else {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          showToast(state.lang === 'ar' ? 'ضع رابط التحميل المباشر لملف Click_Setup.exe في DIRECT_EXE_URL ليبدأ التنزيل فوراً' : 'Set DIRECT_EXE_URL to your direct Click_Setup.exe link to download immediately');
+        });
+      }
     });
-
-    document.querySelectorAll('[data-close-modal]').forEach(btn => {
-      btn.addEventListener('click', () => {
-        document.getElementById(btn.getAttribute('data-close-modal')).classList.add('hidden');
-      });
-    });
-
-    document.getElementById('copySacCmdBtn').addEventListener('click', () => copyText('windowsdefender://smartapp/'));
 
     // Init
     renderLanguage();
